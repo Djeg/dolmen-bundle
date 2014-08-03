@@ -1,0 +1,24 @@
+{
+    "name": "knplabs/dolmen-bundle",
+    "description": "A simple integration of dolmen components inside a symfony2 application.",
+    "require": {
+        "symfony/symfony": "~2.4"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Jegat",
+            "email": "david.jegat@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {"": "src/"}
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}
