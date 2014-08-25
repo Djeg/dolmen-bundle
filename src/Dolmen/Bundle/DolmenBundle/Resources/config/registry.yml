@@ -1,0 +1,6 @@
+parameters:
+    dolmen.registry.view_registry.class: Dolmen\Bundle\DolmenBundle\Registry\ViewRegistry
+
+services:
+    dolmen.registry.view_registry:
+        class: %dolmen.registry.view_registry.class%

@@ -16,8 +16,11 @@
     ],
     "minimum-stability": "dev",
     "autoload": {
-        "psr-0": {"": "src/"}
+        "psr-0": {
+            "Dolmen\\Bundle\\": "src"
+        }
     },
+    "target-dir": "Dolmen/DolmenBundle",
     "config": {
         "bin-dir": "bin/"
     }

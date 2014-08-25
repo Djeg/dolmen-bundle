@@ -1,0 +1,12 @@
+parameters:
+    dolmen.launcher.class: Dolmen\Command\Launcher\Launcher
+    dolmen.launcher.command_launcher.class: Dolmen\Bundle\DolmenBundle\Launcher\CommandLauncher
+
+services:
+    dolmen.launcher:
+        class: %dolmen.launcher.class%
+        arguments: [@event_dispatcher]
+
+    dolmen.launcher.command_launcher:
+        class: %dolmen.launcher.command_launcher.class%
+        arguments: [@dolmen.launcher]

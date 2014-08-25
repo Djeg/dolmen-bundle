@@ -1,0 +1,6 @@
+parameters:
+    dolmen.view_renderer.class: Dolmen\View\Renderer
+
+services:
+    dolmen.view_renderer:
+        class: %dolmen.view_renderer.class%

@@ -1,0 +1,15 @@
+parameters:
+    dolmen.view.dump.class: Dolmen\View\DumpView
+    dolmen.view.template.class: Dolmen\View\TemplateView
+
+services:
+    dolmen.view.dump:
+        class: %dolmen.view.dump.class%
+        tags:
+            - { name: dolmen.view }
+
+    dolmen.view.template:
+        class: %dolmen.view.template.class%
+        arguments: [@templating]
+        tags:
+            - { name: dolmen.view }

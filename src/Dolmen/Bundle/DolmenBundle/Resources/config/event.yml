@@ -1,0 +1,27 @@
+parameters:
+    dolmen.event_listener.command_listener.class: Dolmen\Bundle\DolmenBundle\EventListener\CommandListener
+    dolmen.event_listener.view_listener.class: Dolmen\Bundle\DolmenBundle\EventListener\ViewListener
+    dolmen.command.event.subscriber.mixt_context_subscriber.class: Dolmen\Command\Event\Subscriber\MixtContextSubscriber
+    dolmen.command.event.subscriber.validable_command_subscriber.class: Dolmen\Command\Event\Subscriber\ValidableCommandSubscriber
+
+services:
+    dolmen.event_listener.command_listener:
+        class: %dolmen.event_listener.command_listener.class%
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest, priority: 30 }
+
+    dolmen.event_listener.view_listener:
+        class: %dolmen.event_listener.view_listener.class%
+        arguments: [@dolmen.registry.view_registry, @dolmen.view_renderer]
+        tags:
+            - { name: kernel.event_listener, event: kernel.view, method: onKernelView }
+
+    dolmen.command.event.subscriber.mixt_context_subscriber:
+        class: %dolmen.command.event.subscriber.mixt_context_subscriber.class%
+        tags:
+            - { name: kernel.event_subscriber }
+
+    dolmen.command.event.subscriber.validable_command_subscriber:
+        class: %dolmen.command.event.subscriber.validable_command_subscriber.class%
+        tags:
+            - { name: kernel.event_subscriber }
