@@ -83,7 +83,7 @@ class ViewListenerSpec extends ObjectBehavior
         $event->getRequest()->shouldBeCalled()->willReturn($request);
         $request->attributes = $attributes;
         $attributes->get('_view')->shouldBeCalled()->willReturn([
-            'name' => 'Some view',
+            'type' => 'Some view',
             'options' => ['some options']
         ]);
 

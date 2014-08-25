@@ -2,7 +2,8 @@
     "name": "knplabs/dolmen-bundle",
     "description": "A simple integration of dolmen components inside a symfony2 application.",
     "require": {
-        "symfony/symfony": "~2.4"
+        "symfony/symfony": "~2.4",
+        "knplabs/dolmen": "*"
     },
     "require-dev": {
         "phpspec/phpspec": "*"
